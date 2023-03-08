@@ -35,8 +35,8 @@ def now():
     return datetime_str
 
 
-def get_table(date='2023-03-06',tempTime=55935794,count=-1):
-    url=f'http://roll.hexun.com/roolNews_listRool.action?type=all&ids=108&date={date}&page=1&tempTime={tempTime}'
+def get_table(date='2023-03-06',count=-1):
+    url=f'http://roll.hexun.com/roolNews_listRool.action?type=all&ids=108&date={date}&page=1'
     count=int(count)
     response=requests.get(url)
 
@@ -61,7 +61,7 @@ def get_table(date='2023-03-06',tempTime=55935794,count=-1):
     for page in range(pages+1):
         links=[]
         now_str=now()
-        request_url=f'http://roll.hexun.com/roolNews_listRool.action?type=all&ids=108&date=2023-03-05&page={page}&tempTime={tempTime}'
+        request_url=f'http://roll.hexun.com/roolNews_listRool.action?type=all&ids=108&date={date}&page={page}'
         print("request:")
         print(request_url)
         try:
