@@ -42,4 +42,4 @@ print(args.count)
 
 file_path=get_table(date=args.date,count=args.count)
 
-send_email(args.sender,args.password,args.recipient,args.smtp_server,args.port,subject='Hexun News',attachment_path=file_path)
+#send_email(args.sender,args.password,args.recipient,args.smtp_server,args.port,subject='Hexun News',attachment_path=file_path)
